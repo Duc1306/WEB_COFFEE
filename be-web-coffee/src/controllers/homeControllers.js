@@ -12,6 +12,7 @@ const { getAllProduct, handleCustomerLogin,
     updateProduct, addProduct, getOrdersByDateRange } = require('../services/CRUDservices');
 const { error } = require('console');
 
+<<<<<<< HEAD
 const imageFileMapping = {
     1: 'Phin Sữa Tươi Bánh Flan.webp',
     2: 'Trà Xanh Espresso Marble.webp',
@@ -112,6 +113,13 @@ const getProduct = async (req, res) => {
         console.log(e);
         return res.status(500).json({ message: "Interal server error" });
     }
+=======
+const { getAllProduct, handleCustomerLogin, handleCusRegister, handleUpdateCus } = require('../services/CRUDservices');
+
+const getHomePage = async (req, res) => {
+    let products = await getAllProduct();
+    return res.json(products);
+>>>>>>> f1a39535bb30d959b85b009ae5169ec0b1de9db5
 }
 
 const handleLogin = async (req, res) => {

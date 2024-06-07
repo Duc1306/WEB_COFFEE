@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function renderProducts(products) {
+<<<<<<< HEAD
     const mainContainer = document.querySelector('.home__container');
     mainContainer.innerHTML = ''; // Clear existing content
 
@@ -48,4 +49,30 @@ function createNewRowContainer() {
 
 function formatPrice(price) {
     return parseInt(price).toLocaleString('vi-VN');
+=======
+    const productContainer1 = document.querySelector('.row.row-cols-4.row-cols-md-1:first-of-type');
+    const productContainer2 = document.querySelector('.row.row-cols-4.row-cols-md-1:nth-of-type(2)');
+    productContainer1.innerHTML = ''; // Clear existing content
+    productContainer2.innerHTML = ''; // Clear existing content
+
+    products.forEach((product, index) => {
+        const productElement = `
+            <div class="col">
+                <article class="cate-item">
+                    <img src="./assets/img/category-item-2.webp
+                    " alt="${product.name}" class="cate-item__thumb" />
+                    <section class="cate-item__info">
+                        <a href="#!" class="cate-item__title">${product.name}</a>
+                        <p class="cate-item__desc">${product.price} đ</p>
+                    </section>
+                </article>  
+            </div>
+        `;
+        if (index < 4) {
+            productContainer1.innerHTML += productElement;
+        } else {
+            productContainer2.innerHTML += productElement;
+        }
+    });
+>>>>>>> f1a39535bb30d959b85b009ae5169ec0b1de9db5
 }

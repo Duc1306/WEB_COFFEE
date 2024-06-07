@@ -10,6 +10,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/api/products', getHomePage);
+<<<<<<< HEAD
 router.post('/api/login', handleLogin);
 router.post('/api/register', handleRegister);
 router.post('/api/update', handleUpdate);
@@ -27,3 +28,10 @@ router.put('/api/updateProduct/:id', handleUpdateProduct)
 router.post('/api/addProduct', multerConfig.single('image'), handleAddProduct)
 router.get('/api/orders', getOrder)
 module.exports = router;    
+=======
+router.post('/api/login', handleLogin)
+router.post('/api/register', handleRegister)
+router.post('/api/update', handleUpdate)
+
+module.exports = router;
+>>>>>>> f1a39535bb30d959b85b009ae5169ec0b1de9db5
